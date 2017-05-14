@@ -13,11 +13,11 @@ Tags:
 
 
 //***Estilos***//
+//00___________Variables
+@import 'components/settings';
+
 //00___________Vendor
 @import 'components/vendor';
-
-//01___________Variables
-@import 'components/settings';
 
 //02___________Modulos / Mixins
 @import 'components/modules';
