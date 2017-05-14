@@ -92,8 +92,8 @@ function hinitWP_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-        wp_register_script('hinitWPscripts', get_template_directory_uri() . '/assets/js/scripts.js', '1.0.0'); // Custom scripts
-        wp_enqueue_script('hinitWPscripts'); // Enqueue it!
+        wp_register_script('hw-scripts', get_template_directory_uri() . '/assets/js/scripts.js', '1.0.0'); // Custom scripts
+        wp_enqueue_script('hw-scripts'); // Enqueue it!
     }
 }
 
@@ -102,8 +102,8 @@ function hinitWP_header_scripts()
 function hinitWP_styles()
 {
 
-    wp_register_style('hinitWP', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
-    wp_enqueue_style('hinitWP'); // Enqueue it!
+    wp_register_style('hw-style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_enqueue_style('hw-style'); // Enqueue it!
 }
 
 // Register HTML5 Blank Navigation

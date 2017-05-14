@@ -1,4 +1,7 @@
 const gulp = require('gulp'),
+       //plugins servidor local y sincronización automática
+      browserSync = require('browser-sync')
+
       //Plugins para FTP
       ftp = require('vinyl-ftp'),
       gutil = require('gulp-util'),
@@ -170,7 +173,7 @@ var dirLocales = [
   '!./package.json' ,
   '!./yarn.lock'
   ];
-var dirRemoto = '/public_html'
+var dirRemoto = '/public_html/wp-content/themes/'+ themeName +'/'
  
 //función auxiliar para construir una conexión FTP
 //basada en nuestra configuración
@@ -218,7 +221,25 @@ function getFtpConnection() {
     
 });
 //---> Fin FTP
- 
+
+/**
+ * 
+ * Tarea remote
+ *
+ */
+gulp.task('remote',['styles', 'scripts'] , () =>{
+  browserSync.init({
+    server: './' + themeName +'/',
+    port:8080,
+    open:false,
+    socket:{
+      domain: 'localhost:8080'
+    }
+  });
+  gulp.watch('./' + themeName +'/**/*.css',['styles']);
+  gulp.watch('./' + themeName +'/assets/js/**/*.js',['scripts']).on('change', browserSync.reload);
+  gulp.watch('./' + themeName +'/**/*.php').on('change', browserSync.reload);
+});
 
 gulp.task('sync', [ 'styles', 'images', 'scripts', 'ftp'] , function() {
 });
