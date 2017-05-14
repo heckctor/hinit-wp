@@ -1,10 +1,10 @@
 {
-  "name": "Hinit-wp",
+  "name": "hinitWP",
   "version": "1.0.0",
   "description": "flujo de trabajo para maquetar themes para wordpress",
   "main": "index.js",
   "repository": {
-    "url": "https://github.com/heckctor/hinit-wp.git",
+    "url": "https://github.com/heckctor/hinitWP.git",
     "type": "git"
   },
   "author": "Hektor Peña <heckctor@gmail.com>",

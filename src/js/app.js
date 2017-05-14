@@ -1,3 +1,3 @@
 $(document).ready(function(){
-  console.log('Hola Mundo');
+  console.log('Hinit WP: Hola Mundo');
 });

@@ -121,7 +121,7 @@ gulp.task('concat-js', function() {
 gulp.task('compress-js', function (cb) {
   // the same options as described above 
   var options = {
-    preserveComments: 'license'
+    preserveComments: 'true'
   };
  
   pump([
