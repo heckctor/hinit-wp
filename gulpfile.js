@@ -236,9 +236,9 @@ gulp.task('remote',['styles', 'scripts'] , () =>{
       domain: 'localhost:8080'
     }
   });
-  gulp.watch('./' + themeName +'/**/*.css',['styles']);
-  gulp.watch('./' + themeName +'/assets/js/**/*.js',['scripts']).on('change', browserSync.reload);
-  gulp.watch('./' + themeName +'/**/*.php').on('change', browserSync.reload);
+  gulp.watch('./' + themeName +'/**',['styles']).on('change', browserSync.reload);
+  gulp.watch('./' + themeName +'/assets/js/**',['scripts']).on('change', browserSync.reload);
+  gulp.watch('./' + themeName +'/*.php').on('change', browserSync.reload);
 });
 
 gulp.task('sync', [ 'styles', 'images', 'scripts', 'ftp'] , function() {
