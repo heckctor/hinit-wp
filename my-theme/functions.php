@@ -1,8 +1,8 @@
 <?php
 /*
- *  Author: Todd Motto | @toddmotto
- *  URL: hinitWP.com | @hinitWP
- *  Custom functions, support, custom post types and more.
+ *  Autor: Héctor peña
+ *  URL: http://heckctor.github.io
+ *  Basado en: http://html5blank.com
  */
 
 /*------------------------------------*\
