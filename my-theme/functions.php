@@ -190,7 +190,7 @@ function my_remove_recent_comments_style()
 }
 
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
-function html5wp_pagination()
+function hinitWP_pagination()
 {
     global $wp_query;
     $big = 999999999;
@@ -329,9 +329,9 @@ add_action('init', 'hinitWP_header_scripts'); // Add Custom Scripts to wp_head
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'hinitWP_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
-add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
+add_action('init', 'create_post_type_html5'); // Add our HinitWp CP Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
-add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
+add_action('init', 'hinitWP_pagination'); // Add our HTML5 Pagination
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -387,18 +387,18 @@ function create_post_type_html5()
     register_post_type('html5-blank', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('HTML5 Blank Custom Post', 'hinitWP'), // Rename these to suit
-            'singular_name' => __('HTML5 Blank Custom Post', 'hinitWP'),
+            'name' => __('HinitWp CP', 'hinitWP'), // Rename these to suit
+            'singular_name' => __('HinitWp CP', 'hinitWP'),
             'add_new' => __('Add New', 'hinitWP'),
-            'add_new_item' => __('Add New HTML5 Blank Custom Post', 'hinitWP'),
+            'add_new_item' => __('Add New HinitWp CP', 'hinitWP'),
             'edit' => __('Edit', 'hinitWP'),
-            'edit_item' => __('Edit HTML5 Blank Custom Post', 'hinitWP'),
-            'new_item' => __('New HTML5 Blank Custom Post', 'hinitWP'),
-            'view' => __('View HTML5 Blank Custom Post', 'hinitWP'),
-            'view_item' => __('View HTML5 Blank Custom Post', 'hinitWP'),
-            'search_items' => __('Search HTML5 Blank Custom Post', 'hinitWP'),
-            'not_found' => __('No HTML5 Blank Custom Posts found', 'hinitWP'),
-            'not_found_in_trash' => __('No HTML5 Blank Custom Posts found in Trash', 'hinitWP')
+            'edit_item' => __('Edit HinitWp CP', 'hinitWP'),
+            'new_item' => __('New HinitWp CP', 'hinitWP'),
+            'view' => __('View HinitWp CP', 'hinitWP'),
+            'view_item' => __('View HinitWp CP', 'hinitWP'),
+            'search_items' => __('Search HinitWp CP', 'hinitWP'),
+            'not_found' => __('No HinitWp CPs found', 'hinitWP'),
+            'not_found_in_trash' => __('No HinitWp CPs found in Trash', 'hinitWP')
         ),
         'public' => true,
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
